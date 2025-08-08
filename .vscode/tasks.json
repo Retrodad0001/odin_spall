@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and Run Odin Survivors",
+			"type": "shell",
+			"command": "run.bat",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": false,
+			"problemMatcher": {
+				"owner": "odin",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "^(.*)\\(([0-9]+):([0-9]+)\\)\\s+(Error|Warning):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
+		}
+	]
+}
